@@ -9,7 +9,22 @@ Example:
 assert find('apple') == 0
 assert find('fish') == 5
 '''
+
+filename = 'task01.txt'
+file = open(filename, 'r')
+data = file.read()
+print(data)
+list = data.split('\n')
+print(list)
+for i in list:
+    print(list.index(i))
+
 def find(needle):
+    for i in list:
+        if needle is i:
+            print(list.index(i))
+
+
     pass
 
 
