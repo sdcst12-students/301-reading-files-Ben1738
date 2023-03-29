@@ -18,7 +18,7 @@ list = data.split('\n')
 print(list)
 for i in list:
     print(list.index(i))
-
+'''
 def find(needle):
     for i in list:
         if needle is i:
@@ -31,3 +31,10 @@ def find(needle):
 if __name__ == "__main__":
     assert find('apple') == 0
     assert find('fish') == 5
+    '''
+
+needle = "apple"
+for i in list:
+    if needle is i:
+        print(list.index(i))
+        break
