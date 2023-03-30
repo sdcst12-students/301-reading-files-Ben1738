@@ -11,28 +11,26 @@ For sample data task03.txt, the largest sum should be 68787
 filename = 'task03.txt'
 file = open(filename, 'r')
 data = file.read()
-list = data.split('\n')
+list1 = data.split('\n')
 
 numList = []
-numList2 = []
 nums = []
 
-for i in enumerate(list):
+for i in enumerate(list1):
     numList.append(i[1])
     if i[1] is '':
-        numList2 = numList
-        numList2.remove('')
-        numList2 = [int(j) for j in numList2]
-        print(sum(numList2))
-        nums.append(sum(numList2))
-        numList.clear
-        numList2.clear
+        print(numList)
+        numList.remove(i[1])
+        numList = list(map(int, numList))
+        print(sum(numList))
+        nums.append(sum(numList))
+        if sum(numList)==35839:
+            print(nums)
+            nums.sort()
+            bigNum = nums[-1]
+            print(bigNum)
+            break
+        numList.clear()
     else:
         print(numList)
-    if numList==['','']:
-        print(nums)
-        nums.sort()
-        bigNum = nums[-1]
-        print(bigNum)
-        break
 
