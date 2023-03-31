@@ -12,12 +12,25 @@ Create a function that reads the specific value for a specific level and an armo
 
 """
 
+filename = 'task04.txt'
+file = open(filename, 'r')
+data = file.read()
+list1 = data.split('\n')
+
 def target(lvl,ac):
-    return
+    for i in enumerate(list1):
+        if lvl == i[0]:
+            list2 = i[1].split(' ')
+            print(list2)
+            ans = list2[(int(ac)+10)-(int(ac)*2)]
+            print(ans)
+
+
+    return ans
 
 
 def tests():
-    assert target(3,7) == 23
+    assert target(3,7) == 12
     assert target(9,-1) == 17
     assert target(13,-10) == 20
 
