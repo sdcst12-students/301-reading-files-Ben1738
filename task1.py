@@ -16,25 +16,27 @@ data = file.read()
 print(data)
 list = data.split('\n')
 print(list)
+'''
+needle = "apple"
 for i in list:
-    print(list.index(i))
+    #print(i)
+    if i == 'fish':
+        print(list.index(i))
+        break
+
 '''
 def find(needle):
     for i in list:
-        if needle is i:
+        if i == needle:
             print(list.index(i))
+            break
 
 
-    pass
+    return list.index(i)
 
 
 if __name__ == "__main__":
     assert find('apple') == 0
     assert find('fish') == 5
-    '''
 
-needle = "apple"
-for i in list:
-    if needle is i:
-        print(list.index(i))
-        break
+

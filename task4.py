@@ -26,7 +26,7 @@ def target(lvl,ac):
             print(ans)
 
 
-    return ans
+    return int(ans)
 
 
 def tests():

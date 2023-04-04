@@ -31,7 +31,7 @@ for i in enumerate(list1):
         break
     for j in enumerate(list1):
         specInfo2 = j[1].split(',')
-        if specInfo2[0] in input1:
+        if input1 in specInfo2[0]:
             print('im agy')
             johnList.append(':)')
             a=False

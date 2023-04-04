@@ -45,7 +45,7 @@ for i in enumerate(listA):
         print(burger)
     if burger==['65', '48', '45']:
         print(rightTris)
-        aRights = rightTris.index((rightTris[-1]))+3
+        aRights = rightTris.index((rightTris[-1]))+1
         break
 rightTris.clear()
 for i in enumerate(listB):
