@@ -1,3 +1,4 @@
+import re
 """
 Read the data from the file task02.csv
 Allow the user to search for a stock symbol.
@@ -29,14 +30,16 @@ for i in enumerate(list1):
     if input1 == specInfo[0]:
         print(specInfo[1])
         break
-    for j in enumerate(list1):
-        specInfo2 = j[1].split(',')
-        if input1 in specInfo2[0]:
-            print('im agy')
-            johnList.append(':)')
-            a=False
-        if j[0] == 'ZUMZ':
-            if a==False:
-                print(f'There are {johnList.index()+1} stocks with similar symbols')
-            else:
-                print('No matches')
+    #for j in enumerate(list1):
+    specInfo2 = i[1].split(',')
+    if specInfo[0].find(input1) != -1:
+        johnList.append(specInfo[0])
+        a = False
+    if specInfo[0] == 'ZUMZ':
+        try:
+            a == False
+            print(f'There are {johnList.index(johnList[-1])+1} stocks with similar symbols')
+            break
+        except:
+            print('No matches')
+            break
